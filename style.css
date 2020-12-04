@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #3a3a3b, #202020);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > input[type=button] {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75)
+}
+
+.calculator-grid > input[type=button]:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(41, 20, 20, 0.75);
+    padding: 10px;
+}
+
+.stackoutput {
+    background: none; 
+    text-align: left;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+input[type=text] {
+    background: none;
+    width: 100%;
+    border: none;
+    color: white;
+    text-align: right;
+    padding-top: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}

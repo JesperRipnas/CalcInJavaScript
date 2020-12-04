@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCalc</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="stackoutput"><label id="stack"></label></div>
+            <form name="calculator">
+            <input type="text" id ="number" name="answer" readonly>
+        </div>
+        <input type="button" value="ENTER" class="span-two" onclick="Entry(); calculator.answer.value = ''" />
+        <input type="button" value="CE" onclick="calculator.answer.value = ''" />
+        <input type="button" value="CS" onclick="Clear()" />
+        <input type="button" value="PI" onclick="ClearCE(); calculator.answer.value = '3.14159265359'" />
+        <input type="button" value="7" onclick="calculator.answer.value += '7'" />
+        <input type="button" value="8" onclick="calculator.answer.value += '8'" />
+        <input type="button" value="9" onclick="calculator.answer.value += '9'" />
+        <input type="button" value="÷" onclick="MathDivide()" />
+        <input type="button" value="e" onclick="ClearCE(); calculator.answer.value = '2.718'" />
+        <input type="button" value="4" onclick="calculator.answer.value += '4'" />
+        <input type="button" value="5" onclick="calculator.answer.value += '5'" />
+        <input type="button" value="6" onclick="calculator.answer.value += '6'" />
+        <input type="button" value="*" onclick="MathMultiply()" />
+        <input type="button" value="sin" onclick="MathSin()" />
+        <input type="button" value="7" onclick="calculator.answer.value += '7'" />
+        <input type="button" value="8" onclick="calculator.answer.value += '8'" />
+        <input type="button" value="9" onclick="calculator.answer.value += '9'" />
+        <input type="button" value="-" onclick="MathSub()" />
+        <input type="button" value="cos" onclick="MathCos()" />
+        <input type="button" value="±" onclick="PlusOrMinus()" />
+        <input type="button" value="0" onclick="calculator.answer.value += '0'" />
+        <input type="button" value="," onclick="calculator.answer.value += '.'" />
+        <input type="button" value="+" onclick="MathAdd()" />
+        <input type="button" value="tan" onclick="MathTan()" />
+    </form>
+    </div>
+</body>
+</html>
